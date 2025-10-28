@@ -19,28 +19,46 @@ export default function Navbar() {
       }}
     >
       {/* Logo / Brand */}
-      <div style={{ fontWeight: 600, fontSize: "1rem", letterSpacing: "-0.03em" }}>
+      <div
+        style={{
+          fontWeight: 600,
+          fontSize: "1rem",
+          letterSpacing: "-0.03em",
+        }}
+      >
         LingoStep
       </div>
 
       {/* Links */}
-      <div>
-        <Link style={linkStyle} to="/">Ana Sayfa</Link>
-        <Link style={linkStyle} to="/sentences">Cümleler</Link>
-        <Link style={linkStyle} to="/words">Kelimeler</Link>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "1rem",
+        }}
+      >
+        <Link style={linkStyle} to="/">
+          Ana Sayfa
+        </Link>
+        <Link style={linkStyle} to="/sentences">
+          Cümleler
+        </Link>
+        <Link style={linkStyle} to="/words">
+          Kelimeler
+        </Link>
       </div>
     </nav>
   );
 }
 
 const linkStyle = {
+  borderRadius: "40px",
   color: "white",
   textDecoration: "none",
   padding: "0.4rem 0.6rem",
-  borderRadius: "6px",
   backgroundColor: "rgba(255,255,255,0.05)",
   boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
   fontSize: "0.9rem",
   fontWeight: 500,
-
 };
